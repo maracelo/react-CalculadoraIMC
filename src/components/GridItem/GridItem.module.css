@@ -1,0 +1,51 @@
+.main{
+    flex: 1;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.gridIcon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0, .1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gridTitle{
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.gridInfo{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 14px;
+}
+.yourImc{
+    font-size: 17px;
+    margin: 10px 0 50px 0;
+}
+
+
+
+@media (max-width: 376px){
+    .main{
+        padding: 10px;
+    }
+    .main p{
+        word-wrap: break-word;
+    }
+    .gridIcon{
+        width: 50px;
+        height: 50px;
+    }
+    .gridTitle{
+        font-size: 16px;
+    }
+}

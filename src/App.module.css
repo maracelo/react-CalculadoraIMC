@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    padding-bottom: 40px;
+}
+.headerContainer{
+    max-width: 900px;
+    margin: 40px auto;
+}
+.container{
+    display: flex;
+    margin: auto;
+    max-width: 900px;
+}
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h1{
+    color: #3a4b5c;
+}
+.container .leftSide p{
+    margin: 40px 0;
+    color: #6a7d8b;
+}
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+}
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+.container .rightSide .rightBig{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.container .rightSide .rightArrow{
+    background-color: #227c9d;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    margin-top: 165px;
+    margin-left: -35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.container .rightSide .rightArrow:hover{
+    filter: brightness(130%);
+}
+
+button{
+    background-color: #227c9d;
+    color: #fff;
+    font-size: 15px;
+    border: 0;
+    border-radius: 10px;
+    padding: 15px 0;
+    margin-top: 40px;
+    width: 100%;
+    transition: all ease .2s;
+}
+button:hover{
+    filter: brightness(130%);
+    cursor: pointer;
+}
+button:hover:disabled{
+    filter: none;
+    cursor: default;
+}
+button:disabled{
+    opacity: .5;
+}
+input[type=number]{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #ccc;
+    outline: 0;
+    padding: 10px 2px;
+    margin-bottom: 20px;
+}
+input:disabled{
+    opacity: .5;
+    background-color: transparent;
+}
+
+
+
+@media (max-width: 1000px){
+    .headerContainer{
+        padding: 0 20px;
+        margin: 20px auto;
+    }
+    .container{
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    .container .leftSide{
+        margin: 0 20px;
+    }
+    .container .leftSide p{
+        font-size: 14px;
+        margin: 20px 0 40px;
+    }
+    .container .rightSide .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container .rightSide{
+        margin: 0 20px;
+    }
+    .container .rightSide .rightArrow{
+        margin-top: 0px;
+        margin-left: 0;
+        border-radius: 10px 0 50% 0;
+    }
+
+    button{
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 376px){
+    .container .rightSide .grid{
+        gap: 10px;
+    }
+    .container .rightSide .rightArrow{
+        width: 50px;
+        height: 50px;
+    }
+}
